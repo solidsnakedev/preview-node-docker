@@ -1,0 +1,15 @@
+services:
+  cardano-node-preview:
+    build: .
+    image: cardano-node-preview
+    container_name: cardano-node-preview
+    volumes:
+      - ./node/db/:/node/db
+      - ./node/logs/:/node/logs
+      - ./node/ipc/:/node/ipc
+      - ./node/keys/:/node/keys
+      - ./node/addresses/:/node/addresses
+      - ./node/transactions/:/node/transactions
+      - ./node/plutus-scripts:/node/plutus-scripts
+      - ./node/native-scripts:/node/native-scripts
+      - ./node/data:/node/data
